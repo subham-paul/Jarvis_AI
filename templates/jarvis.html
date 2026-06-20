@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+
+{% block title %}Jarvis Features - Your AI Assistant{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<section class="page-header py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h1 class="display-4 fw-bold">Jarvis AI Features</h1>
+                <p class="lead">Explore the complete capabilities of your personal AI assistant</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Demo Section -->
+<section class="demo-section py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="demo-container">
+                    <div class="demo-header">
+                        <h3><i class="fas fa-robot me-2"></i>Jarvis AI Console</h3>
+                        <div class="status-indicator">
+                            <span class="status-dot online"></span>
+                            <span>Online</span>
+                        </div>
+                    </div>
+                    <div class="demo-content">
+                        <div class="command-history" id="commandHistory">
+                            <div class="message jarvis-message">
+                                <strong>Jarvis:</strong> Hello! I'm ready to assist you. What would you like to do today?
+                            </div>
+                        </div>
+                        <div class="command-input">
+                            <input type="text" id="commandInput" placeholder="Type your command here... (e.g., 'play music', 'what time is it')">
+                            <button id="sendCommand" class="btn btn-primary">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                        
+                        <!-- Voice Control Section - Added Here -->
+                        <div class="voice-control mt-3">
+                            <button id="voiceButton" class="btn btn-outline-success">
+                                🎤 Start Voice
+                            </button>
+                            <small class="text-muted ms-2">Click and speak your command</small>
+                        </div>
+                        
+                        <div class="quick-commands mt-3">
+                            <h6>Try these commands:</h6>
+                            <div class="quick-buttons">
+                                <button class="btn btn-outline-primary btn-sm" data-command="play ghar se nikalte hi">
+                                    Play Music
+                                </button>
+                                <button class="btn btn-outline-primary btn-sm" data-command="what time is it">
+                                    Get Time
+                                </button>
+                                <button class="btn btn-outline-primary btn-sm" data-command="weather in london">
+                                    Check Weather
+                                </button>
+                                <button class="btn btn-outline-primary btn-sm" data-command="tell me a joke">
+                                    Tell Joke
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

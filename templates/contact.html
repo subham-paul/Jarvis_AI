@@ -1,0 +1,281 @@
+{% extends "base.html" %}
+
+{% block title %}Contact Us - Jarvis AI{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<section class="page-header py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h1 class="display-4 fw-bold text-dark">Contact Us</h1>
+                <p class="lead text-dark">Get in touch with the Jarvis AI development team</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact-section py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="contact-form-container">
+                    <h3 class="text-center mb-4 text-dark">Send us a Message</h3>
+                    <form id="contactForm">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group mb-3">
+                                    <label for="name" class="form-label text-dark">Full Name</label>
+                                    <input type="text" class="form-control" id="name" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group mb-3">
+                                    <label for="email" class="form-label text-dark">Email Address</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="subject" class="form-label text-dark">Subject</label>
+                            <input type="text" class="form-control" id="subject" required>
+                        </div>
+                        <div class="form-group mb-4">
+                            <label for="message" class="form-label text-dark">Message</label>
+                            <textarea class="form-control" id="message" rows="5" required></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary btn-lg">
+                                <i class="fas fa-paper-plane me-2"></i>Send Message
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Info -->
+<section class="contact-info py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 text-center">
+                <div class="contact-item">
+                    <i class="fas fa-envelope fa-2x mb-3 text-primary"></i>
+                    <h4 class="text-dark">Email</h4>
+                    <p class="text-dark">contact@jarvisai.com</p>
+                    <p class="text-dark">support@jarvisai.com</p>
+                </div>
+            </div>
+            <div class="col-md-4 text-center">
+                <div class="contact-item">
+                    <i class="fas fa-phone fa-2x mb-3 text-primary"></i>
+                    <h4 class="text-dark">Phone</h4>
+                    <p class="text-dark">+1 (555) 123-4567</p>
+                    <p class="text-dark">+1 (555) 987-6543</p>
+                </div>
+            </div>
+            <div class="col-md-4 text-center">
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt fa-2x mb-3 text-primary"></i>
+                    <h4 class="text-dark">Address</h4>
+                    <p class="text-dark">123 Tech Innovation Drive</p>
+                    <p class="text-dark">Tech Valley, CA 94000</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="faq-section py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2 class="text-center mb-5 text-dark">Frequently Asked Questions</h2>
+                <div class="accordion" id="faqAccordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                Is Jarvis AI free to use?
+                            </button>
+                        </h2>
+                        <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body text-dark">
+                                Yes, Jarvis AI is completely free and open-source. You can download, use, and modify the code according to your needs.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                What are the system requirements?
+                            </button>
+                        </h2>
+                        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body text-dark">
+                                Jarvis AI runs on Windows, macOS, and Linux. You need Python 3.8+ and a microphone for voice commands. 4GB RAM minimum recommended.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                Can I add my own songs to the music database?
+                            </button>
+                        </h2>
+                        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body text-dark">
+                                Yes! You can easily add songs by modifying the song_database in the features.py file with YouTube URLs.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Ensure all text is black and visible */
+    .page-header {
+        background: #f8f9fa !important;
+    }
+    
+    .contact-section {
+        background: white;
+    }
+    
+    .faq-section {
+        background: white;
+    }
+    
+    /* Form styling */
+    .contact-form-container {
+        background: white;
+        padding: 3rem;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        border: 1px solid #e9ecef;
+    }
+    
+    .form-control {
+        border: 2px solid #e9ecef;
+        transition: all 0.3s ease;
+    }
+    
+    .form-control:focus {
+        border-color: #0d6efd;
+        box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+    }
+    
+    /* Contact items styling */
+    .contact-item {
+        padding: 2rem 1rem;
+        transition: transform 0.3s ease;
+    }
+    
+    .contact-item:hover {
+        transform: translateY(-5px);
+    }
+    
+    .contact-item h4 {
+        color: #0d6efd;
+        margin-bottom: 1rem;
+    }
+    
+    /* Accordion styling */
+    .accordion-button {
+        background-color: #f8f9fa;
+        border: 1px solid #dee2e6;
+        font-weight: 600;
+    }
+    
+    .accordion-button:not(.collapsed) {
+        background-color: #0d6efd;
+        color: white;
+        border-color: #0d6efd;
+    }
+    
+    .accordion-button:focus {
+        box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+        border-color: #0d6efd;
+    }
+    
+    .accordion-body {
+        background-color: white;
+        border: 1px solid #dee2e6;
+        border-top: none;
+    }
+    
+    /* Ensure all text is properly colored */
+    .text-dark {
+        color: #212529 !important;
+    }
+    
+    /* Button styling */
+    .btn-primary {
+        background-color: #0d6efd;
+        border-color: #0d6efd;
+        padding: 12px 30px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+    }
+    
+    .btn-primary:hover {
+        background-color: #0b5ed7;
+        border-color: #0a58ca;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(13, 110, 253, 0.3);
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Contact form submission
+        const contactForm = document.getElementById('contactForm');
+        
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            
+            // Simple validation
+            if (name && email && subject && message) {
+                // Show success message
+                alert('Thank you for your message! We will get back to you soon.');
+                
+                // Reset form
+                contactForm.reset();
+            } else {
+                alert('Please fill in all fields.');
+            }
+        });
+        
+        // Add animation to contact items
+        const contactItems = document.querySelectorAll('.contact-item');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        contactItems.forEach(item => {
+            item.style.opacity = '0';
+            item.style.transform = 'translateY(30px)';
+            item.style.transition = 'all 0.6s ease';
+            observer.observe(item);
+        });
+    });
+</script>
+{% endblock %}
